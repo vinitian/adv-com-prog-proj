@@ -21,10 +21,10 @@
 
 # Checklist
 [ ] 1 drop down input + button for filter: Province name
-  [ ] Bar chart : male% and female%, can add provinces (so more dataseries) -- tan
-  [ ] Doughnut chart : total population of the province% to total in thailand -- ian
+[ ] Bar chart : male% and female%, can add provinces (so more dataseries) -- tan
+[ ] Doughnut chart : total population of the province% to total in thailand -- ian
 [ ] 1 text input for showing the first n province and another dropdown input to whether sort by Total Population, Male, Female, or Household
-  [ ] Bar chart -- king
+[ ] Bar chart -- king
 [ ] design webpage
 [ ] styles.css
 [ ] presentation
