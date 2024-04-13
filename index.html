@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Population in Thailand (2562)</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
 </head>
 <body>
     <script type="text/javascript" src="script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <h1>Population in Thailand (2562)</h1>
-
-    <label for="province">Province: </label>
-    <select name="province" id="province"></select>
+    <div>
+        <label for="province">Province: </label>
+        <select name="province" id="province"></select>
+        <script>
+            createOptions();
+        </script>
+        <button id="select-province" onClick="addProvince(document.getElementById('province').value)">Select</button>
+        <div id="main-test">
+            <div id="test-1">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            <div id="test-1">
+                <canvas id="barChartMF"></canvas>
+            </div>
+        </div>
+    </div>
+    <div id="sec-2">
+        <label for="limit">Top: </label>
+        <input type="number" name="limit" id="limit" />
+        <label for="sortBy">Sort By: </label>
+        <select name="sortBy" id="sortBy"></select>
+        <script>
+            createOptions2();
+        </script>
+        <button id="select-province" onClick="showBarChartSort(document.getElementById('limit').value, document.getElementById('sortBy').value)">Select</button>
+        <canvas id="barChartSort"></canvas>
+    </div>
+    
     <script>
-        createOptions(); //create dropdown options
-    </script>
-    <button id="select-province" onClick="addProvince(document.getElementById('province').value)">Select</button>
-
-    <canvas id="doughnutChart"></canvas>
-    <script>
-        let provinces = [];
-        function addProvince(province) {
-            if (!provinces.includes(province)) {
-                provinces.push(province);
-            }
-            console.log("addProvince: " + provinces);
-            showDoughnutChart(provinces);
-        }
+        
     </script>
 
 </body>
