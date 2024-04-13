@@ -41,6 +41,15 @@
     </div>
     
     <script>
+        let provinces = [];
+        function addProvince(province) {
+            if (!provinces.includes(province)) {
+                provinces.push(province);
+            }
+            console.log("addProvince: " + provinces);
+            showDoughnutChart(provinces);
+            showBarChartMF(province);
+        }
         
     </script>
 
