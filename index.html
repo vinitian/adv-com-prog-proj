@@ -12,31 +12,36 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <h1>Population in Thailand (2562)</h1>
-    <div>
+    <div id="LABEL">
         <label for="province">Province: </label>
         <select name="province" id="province"></select>
         <script>
             createOptions();
         </script>
         <button id="select-province" onClick="addProvince(document.getElementById('province').value)">Select</button>
-        <div id="main-test">
-            <div id="test-1">
-                <canvas id="doughnutChart"></canvas>
-            </div>
-            <div id="test-1">
-                <canvas id="barChartMF"></canvas>
-            </div>
+    </div>
+
+    <div id="sec-1">
+        <div id="test-1">
+            <canvas id="doughnutChart"></canvas>
+        </div>
+        <div id="test-1">
+            <canvas id="barChartMF"></canvas>
         </div>
     </div>
-    <div id="sec-2">
+
+    <div id="LABEL2">
         <label for="limit">Top: </label>
-        <input type="number" name="limit" id="limit" />
+        <input type="number" name="limit" id="limit" placeholder="-"/>
         <label for="sortBy">Sort By: </label>
         <select name="sortBy" id="sortBy"></select>
         <script>
             createOptions2();
         </script>
-        <button id="select-province" onClick="showBarChartSort(document.getElementById('limit').value, document.getElementById('sortBy').value)">Select</button>
+        <button id="select-sort" onClick="showBarChartSort(document.getElementById('limit').value, document.getElementById('sortBy').value)">Select</button>
+    </div>
+
+    <div id="sec-3">
         <canvas id="barChartSort"></canvas>
     </div>
     

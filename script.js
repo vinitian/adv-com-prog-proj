@@ -81,8 +81,13 @@ async function showDoughnutChart(provinces){
             data: populationData,
             backgroundColor: bgColors,
             hoverBackgroundColor: 'rgb(255, 99, 132)',
-            hoverOffset: 50
+            hoverOffset: 40,
           }]
+        },
+        options: {
+            layout: {
+                padding: 20
+            }
         }
     });
 }

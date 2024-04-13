@@ -3,36 +3,56 @@
     box-sizing: border-box;
 }
 h1 {
-    font-weight: 300;
-    font-size: 40px;
+    font-size: 50px;
     color: #414141;
-    margin: 0;
     text-align: center;
-    
-
+    margin : 10px 0;
 }
 
-#sec-1 {
-    padding: 10px;
-    background-color: rgb(154, 126, 93);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#sec-2{
-    align-items: center;
+#LABEL {
+    font-size: 30px;
+    color: #414141;
+    text-align: center;
+    margin: 0;
 }
 
+#LABEL2 {
+    font-size: 25px;
+    color: #414141;
+    text-align: center;
+    margin-top: 30px;
+}
 
-#main-test {
-    background-color: rgb(200, 200, 200);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 0px, 20px;
+#province, #select-province, #select-sort, #sec-3, #sortBy {
+    font-size: 20px;
+    color: #414141;
+    text-align: center;
+    margin: 0;
+    padding: 6px 16px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+}
+
+#limit {
+    font-size: 20px;
+    color: #414141;
+    text-align: center;
+    margin: 0;
+    padding: 6px 0px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    width: 50px;
+}
+
+#select-province, #select-sort {
+      background-color: #FAFBFC;
+      border: 1px solid rgba(27, 31, 35, 0.15);
+      box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+      color: #24292E;
+}
+
+#select-province:hover, #select-sort:hover {
+    background-color: #F3F4F6;
 }
 
 #test-1, #test-2 {
@@ -40,15 +60,41 @@ h1 {
     align-items: center;
 }
 
-#doughnutChart {
-    background-color: cornflowerblue;
+#sec-1 {
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #919191;
     width: 100%;
+    margin: 30px 0 0 0;
+    padding: 5px;
 }
 
-#barChartMF {
-    background-color: aquamarine;
+#sec-2 {
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
     width: 100%;
-    align-items: flex-start;
+    margin: 30px 0 0 0;
+    padding: 5px;
+
+}
+
+#sec-3{
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #919191;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 5px;
 }
 
 canvas {
