@@ -26,7 +26,7 @@ async function createOptions(){
 
 //to-do: make the chart updatable
 async function showDoughnutChart(provinces){
-    const response = await fetch("https://data.thailand.opendevelopmentmekong.net/th/api/3/action/datastore_search?resource_id=108125ab-7323-4b29-bcbe-9fc8bb24acbf")
+    const response = await fetch("https://data.thailand.opendevelopmentmekong.net/th/api/3/action/datastore_search_sql?sql=SELECT%20_id,%20province,%20total,%20male,%20female,%20household%20from%20%22108125ab-7323-4b29-bcbe-9fc8bb24acbf%22")
     const wholeData = await response.json();
     const provinceNames = wholeData.result.records
         .filter(e => provinces.includes(e._id.toString()))
