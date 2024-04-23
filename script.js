@@ -1,3 +1,4 @@
+// fetch province list from api (takes a long time)
 // async function createOptions(){
 //     const response = await fetch("https://data.thailand.opendevelopmentmekong.net/th/api/3/action/datastore_search?resource_id=108125ab-7323-4b29-bcbe-9fc8bb24acbf")
 //     const wholeData = await response.json();
@@ -30,8 +31,7 @@ async function createOptions(){
         option.textContent = provinces[i];
         option.value = i;
         dropdown.appendChild(option);
-    }
-    
+    }  
 }
 async function createOptions2(){
     const listSortBy = ['Total Population', 'Male', 'Female', 'Household'];
@@ -44,7 +44,6 @@ async function createOptions2(){
     }
 }
 
-//to-do: make the chart updatable
 let colors = [];
 async function showDoughnutChart(provinces){
     const response = await fetch("https://data.thailand.opendevelopmentmekong.net/th/api/3/action/datastore_search_sql?sql=SELECT%20_id,%20province,%20total,%20male,%20female,%20household%20from%20%22108125ab-7323-4b29-bcbe-9fc8bb24acbf%22")
@@ -61,14 +60,11 @@ async function showDoughnutChart(provinces){
     populationData.push(theRestPop);
     provinceNames.push("The rest of population");
     
-
     colors.push([[Math.round(Math.random()*(256 - 150) + 150), Math.round(Math.random()*(256 - 150) + 150), Math.round(Math.random()*(256 - 150) + 150)]]);
     colors.splice(0,0,[[Math.round(Math.random()*(256 - 150) + 150), Math.round(Math.random()*(256 - 150) + 150), Math.round(Math.random()*(256 - 150) + 150)]]);
     bgColors = colors.map(e => "rgb(" + e.join(",") + ")");
     console.log(bgColors);
 
-    // console.log(provinceNames);
-    // console.log(populationData);
     if (typeof DoughnutChart != "undefined") {
         DoughnutChart.destroy();
     }
@@ -145,7 +141,6 @@ async function showBarChartMF(provinces){
         }
         }
     });
-
 }
 
 async function showBarChartSort(limit, sortByThis){
